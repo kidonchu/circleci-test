@@ -16,6 +16,9 @@ jobs:
       - run:
           name: run phplint
           command: ~/.composer/vendor/bin/phplint --exclude vendor .
+      - run:
+          name: run test
+          command: php test.php
   build:
     <<: *defaults
     steps:
